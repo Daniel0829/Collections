@@ -1,0 +1,8 @@
+#!name=voicenotes
+#!desc=voicenotes
+
+[Script]
+voicenotes = type=http-response, pattern=https://api.voicenotes.com/api/auth/me, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/voicenotes.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% api.voicenotes.com
