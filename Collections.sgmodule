@@ -33,13 +33,13 @@ https?:\/\/omp-audiobookpay\.lrts\.me\/a\.p\?op=get_advertright data="https://ra
 [Script]
 # Revenuecat解锁系列
 # hostname = api.revenuecat.com
-revenuecat1 = type=http-response,pattern= ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js
-revenuecat2 = type=http-request,pattern= ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=0,max-size=0,script-path= https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js,script-update-interval=0
+#revenuecat1 = type=http-response,pattern= ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js
+#revenuecat2 = type=http-request,pattern= ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=0,max-size=0,script-path= https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js,script-update-interval=0
 
 #***********************************#
 # iTunes解锁系列
 # hostname = buy.itunes.apple.com
-iTunes = type=http-response,pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js
+#iTunes = type=http-response,pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js
 
 #***********************************#
 # Nicegram
