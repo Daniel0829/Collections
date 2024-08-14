@@ -42,11 +42,6 @@ revenuecat2 = type=http-request,pattern= ^https?:\/\/api\.revenuecat\.com\/.+\/(
 iTunes = type=http-response,pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js
 
 #***********************************#
-# Nicegram
-# hostname = restore-access.indream.app
-Nicegram = type=http-response,pattern=^https?:\/\/restore-access\.indream\.app\/restoreAccess,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/nicegram.js
-
-#***********************************#
 # PS 图片编辑
 # hostname = lcs-mobile-cops.adobe.io
 Ps = type=http-response,pattern=^https:\/\/lcs-mobile-cops\.adobe\.io\/(mobile_profile|mobiles\/access_profile),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Ps.js
@@ -56,11 +51,6 @@ Ps = type=http-response,pattern=^https:\/\/lcs-mobile-cops\.adobe\.io\/(mobile_p
 # hostname = *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn
 彩云天气-SVIP会员 = type=http-response,pattern=^https?:\/\/(biz|wrapper|starplucker)\.(cyapi|caiyunapp)\.(cn|com)\/(.+\/(user\?app_name|activity\?app_name|visitors|operation\/banners)|p\/v\d\/(vip_info|user_info)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyuntianqi.js
 彩云天气-SVIP地图 = type=http-request,pattern=^https?:\/\/(api|wrapper)\.(cyapi|caiyunapp)\.(cn|com)\/v\d\/(satellite|nafp\/origin_images),requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyuntianqi.js
-
-#***********************************#
-# Emby(解锁播放权限)
-# hostname = mb3admin.com
-Emby解锁播放权限 = type=http-request,pattern=^https?:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey),requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/embycrack.js
 
 #***********************************#
 # 扫描全能王
@@ -92,11 +82,6 @@ Cubox-收藏阅读 = type=http-response,pattern=^https?:\/\/cubox\.(pro|cc)\/c\/
 # iLove PDF
 # hostname = service.ilovepdf.com
 iLove PDF = type=http-response,pattern=^https?:\/\/service\.ilovepdf\.com\/.+\/user,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/ilove.js
-
-#***********************************#
-# 猫头鹰文件管理
-# hostname = www.skyjos.cn
-猫头鹰文件管理 = type=http-response,pattern=^https?:\/\/www\.skyjos\.cn,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/mtywj.js
 
 #***********************************#
 # 极简汇率
@@ -169,11 +154,6 @@ exping地图标记 = type=http-response,pattern=^https?:\/\/api\.expingworld\.co
 Drafts = type=http-response,pattern=^https?:\/\/backend\.getdrafts\.com\/api\/v\d\/verification\/(account_status|verify_receipt),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Drafts.js
 
 #***********************************#
-# Hydra相机
-# hostname = creaceed.com
-Hydra = type=http-response,pattern=^https?:\/\/creaceed\.com\/apis\/appstore\/verifyreceipt,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Hydra.js
-
-#***********************************#
 # FT中文网/RainViewer天气预报
 # hostname = *.cloudfront.net, ftmailbox.cn
 FT/天气预报 = type=http-response,pattern=^https?:\/\/.*\.cloudfront\.net\/(index\.php\/jsapi\/(paywall|get_story_more_info)|mobile\/verify),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/cloudfront.js
@@ -194,15 +174,10 @@ MIX-滤镜大师 = type=http-response,pattern=^https?:\/\/cdn-bm\.camera360\.com
 DuetDisplay = type=http-response,pattern=^https?:\/\/rdp\.duetdisplay\.com\/v1\/users\/validateReceipt,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/DuetDisplay.js
 
 #***********************************#
-# 幕布
-# hostname = api2.mubu.com
-幕布 = type=http-response,pattern=^https?:\/\/api2\.mubu\.com\/v3\/api\/user\/current_user,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/mubu.js
-
-#***********************************#
 # flapp
 # hostname = fl*app.com
 flomo = type=http-response,pattern=^https:\/\/fl.*app\.com\/api\/v\d\/user\/me,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/lofo.js
 
 #***********************************#
 [MITM]
-hostname = %APPEND% bd-api.kuwo.cn, api2.mubu.com, rdp.duetdisplay.com, epbox.gongfudou.com, www.xiaoxiongyouhao.com, cdn-bm.camera360.com, *.cloudfront.net, ftmailbox.cn, kkr-creaceed.com, backend.getdrafts.com, api.expingworld.com, mobile.flightradar24.com, oxfordx.cp.com.cn, notability.com, zy6kcqa01a.execute-api.us-east-2.amazonaws.com, api.hummingbird.businessreview.global, *.wps.cn, i.at.qq.com, ssl-api.itranslateapp.com, *xmind.*, sia.gikken.co, *.xiuxiu.meitu.com, api.posters.meitu.com, xremit.xcurrency.com, explorer.tratao.com, www.skyjos.cn, service.ilovepdf.com, cubox.*, accounts.agenda.com, *.aoscdn.com, *.apsapp.cn, spclient.wg.spotify.com, *.camscanner.com, *.intsig.net, mb3admin.com, *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, lcs-mobile-cops.adobe.io, nicegram.cloud, restore-access.indream.app, buy.itunes.apple.com, firestore.googleapis.com, api.revenuecat.com，fl*app.com
+hostname = %APPEND% bd-api.kuwo.cn, rdp.duetdisplay.com, epbox.gongfudou.com, www.xiaoxiongyouhao.com, cdn-bm.camera360.com, *.cloudfront.net, ftmailbox.cn, backend.getdrafts.com, api.expingworld.com, mobile.flightradar24.com, oxfordx.cp.com.cn, notability.com, zy6kcqa01a.execute-api.us-east-2.amazonaws.com, api.hummingbird.businessreview.global, *.wps.cn, i.at.qq.com, ssl-api.itranslateapp.com, *xmind.*, sia.gikken.co, *.xiuxiu.meitu.com, api.posters.meitu.com, xremit.xcurrency.com, explorer.tratao.com, service.ilovepdf.com, cubox.*, accounts.agenda.com, *.aoscdn.com, *.apsapp.cn, spclient.wg.spotify.com, *.camscanner.com, *.intsig.net, *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, lcs-mobile-cops.adobe.io, buy.itunes.apple.com, firestore.googleapis.com, api.revenuecat.com，fl*app.com
