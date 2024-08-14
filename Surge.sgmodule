@@ -149,11 +149,6 @@ Hyperweb = type=http-response,pattern=^https?:\/\/zy6kcqa01a\.execute-api\.us-ea
 Notability = type=http-response,pattern=^https?:\/\/notability\.com\/(global|subscriptions),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/notability.js
 
 #***********************************#
-# 解锁10个APP，包含APP：Filmicpro，Focos，Focos live，Splice，30 Day Fitness，Sleep，Remini，Yoga Wave，Firstlight，Doubletake
-# hostname = *.oracle.bendingspoonsapps.com
-bending = type=http-response,pattern=^https?:\/\/.*\.oracle\.bendingspoonsapps\.com\/v\d\/(users\/.+|purchases\/verify),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/bending.js
-
-#***********************************#
 # 牛津高阶词典第十版
 # hostname = oxfordx.cp.com.cn
 牛津高阶词典 = type=http-response,pattern=^https:\/\/oxfordx\.cp\.com\.cn\/api\/pay\/apple_notify,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/niujin10.js
@@ -204,15 +199,10 @@ DuetDisplay = type=http-response,pattern=^https?:\/\/rdp\.duetdisplay\.com\/v1\/
 幕布 = type=http-response,pattern=^https?:\/\/api2\.mubu\.com\/v3\/api\/user\/current_user,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/mubu.js
 
 #***********************************#
-# Felo实时翻译
-# hostname = translator.felo.me
-Felo = type=http-response,pattern=^https?:\/\/translator\.felo\.me\/api\/plan\/current,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Felo.js
-
-#***********************************#
 # flapp
 # hostname = fl*app.com
 flomo = type=http-response,pattern=^https:\/\/fl.*app\.com\/api\/v\d\/user\/me,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/lofo.js
 
 #***********************************#
 [MITM]
-hostname = %APPEND% bd-api.kuwo.cn, translator.felo.me, api2.mubu.com, rdp.duetdisplay.com, epbox.gongfudou.com, www.xiaoxiongyouhao.com, cdn-bm.camera360.com, *.cloudfront.net, ftmailbox.cn, kkr-creaceed.com, backend.getdrafts.com, api.expingworld.com, mobile.flightradar24.com, oxfordx.cp.com.cn, *.oracle.bendingspoonsapps.com, notability.com, zy6kcqa01a.execute-api.us-east-2.amazonaws.com, api.hummingbird.businessreview.global, *.wps.cn, i.at.qq.com, ssl-api.itranslateapp.com, *xmind.*, sia.gikken.co, *.xiuxiu.meitu.com, api.posters.meitu.com, xremit.xcurrency.com, explorer.tratao.com, www.skyjos.cn, service.ilovepdf.com, cubox.*, accounts.agenda.com, *.aoscdn.com, *.apsapp.cn, spclient.wg.spotify.com, *.camscanner.com, *.intsig.net, mb3admin.com, *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, lcs-mobile-cops.adobe.io, nicegram.cloud, restore-access.indream.app, buy.itunes.apple.com, firestore.googleapis.com, api.revenuecat.com，fl*app.com
+hostname = %APPEND% bd-api.kuwo.cn, api2.mubu.com, rdp.duetdisplay.com, epbox.gongfudou.com, www.xiaoxiongyouhao.com, cdn-bm.camera360.com, *.cloudfront.net, ftmailbox.cn, kkr-creaceed.com, backend.getdrafts.com, api.expingworld.com, mobile.flightradar24.com, oxfordx.cp.com.cn, notability.com, zy6kcqa01a.execute-api.us-east-2.amazonaws.com, api.hummingbird.businessreview.global, *.wps.cn, i.at.qq.com, ssl-api.itranslateapp.com, *xmind.*, sia.gikken.co, *.xiuxiu.meitu.com, api.posters.meitu.com, xremit.xcurrency.com, explorer.tratao.com, www.skyjos.cn, service.ilovepdf.com, cubox.*, accounts.agenda.com, *.aoscdn.com, *.apsapp.cn, spclient.wg.spotify.com, *.camscanner.com, *.intsig.net, mb3admin.com, *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, lcs-mobile-cops.adobe.io, nicegram.cloud, restore-access.indream.app, buy.itunes.apple.com, firestore.googleapis.com, api.revenuecat.com，fl*app.com
