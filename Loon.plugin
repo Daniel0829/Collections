@@ -198,26 +198,11 @@ http-response ^https?:\/\/.*\.cloudfront\.net\/(index\.php\/jsapi\/(paywall|get_
 # hostname = cdn-bm.camera360.com
 http-response ^https?:\/\/cdn-bm\.camera360\.com\/api\/(mix\/(getinfo|purchase|recovery)|iap\/check-receipt) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/mix.js, requires-body=true, tag=MIX-滤镜大师
 
-#***********************************#
+#************************************#
 # 小熊油耗
 # hostname = www.xiaoxiongyouhao.com
 http-response ^https?:\/\/www\.xiaoxiongyouhao\.com\/api\/vip\/index.+ script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/xiaoxiongyouhao.js, requires-body=true, tag=小熊油耗
 
 #***********************************#
-# Duet Display/DuetAir
-# hostname = rdp.duetdisplay.com
-http-response ^https?:\/\/rdp\.duetdisplay\.com\/v1\/users\/validateReceipt script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/DuetDisplay.js, requires-body=true, tag=DuetDisplay
-
-#***********************************#
-# 幕布
-# hostname = api2.mubu.com
-http-response ^https?:\/\/api2\.mubu\.com\/v3\/api\/user\/current_user script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/mubu.js, requires-body=true, tag=幕布
-
-#***********************************#
-# Felo实时翻译
-# hostname = translator.felo.me
-http-response ^https?:\/\/translator\.felo\.me\/api\/plan\/current script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Felo.js, requires-body=true, tag=Felo
-
-#***********************************#
 [MITM]
-hostname = bd-api.kuwo.cn, translator.felo.me, api2.mubu.com, rdp.duetdisplay.com, epbox.gongfudou.com, www.xiaoxiongyouhao.com, cdn-bm.camera360.com, *.cloudfront.net, ftmailbox.cn, kkr-creaceed.com, backend.getdrafts.com, api.expingworld.com, mobile.flightradar24.com, oxfordx.cp.com.cn, *.oracle.bendingspoonsapps.com, notability.com, zy6kcqa01a.execute-api.us-east-2.amazonaws.com, api.hummingbird.businessreview.global, *.wps.cn, i.at.qq.com, ssl-api.itranslateapp.com, *xmind.*, sia.gikken.co, *.xiuxiu.meitu.com, api.posters.meitu.com, xremit.xcurrency.com, explorer.tratao.com, www.skyjos.cn, service.ilovepdf.com, cubox.*, accounts.agenda.com, *.aoscdn.com, *.apsapp.cn, spclient.wg.spotify.com, *.camscanner.com, *.intsig.net, mb3admin.com, *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, lcs-mobile-cops.adobe.io, nicegram.cloud, restore-access.indream.app, buy.itunes.apple.com, api.revenuecat.com, fl*app.com
+hostname = bd-api.kuwo.cn, epbox.gongfudou.com, www.xiaoxiongyouhao.com, cdn-bm.camera360.com, *.cloudfront.net, ftmailbox.cn, kkr-creaceed.com, backend.getdrafts.com, api.expingworld.com, mobile.flightradar24.com, oxfordx.cp.com.cn, *.oracle.bendingspoonsapps.com, notability.com, zy6kcqa01a.execute-api.us-east-2.amazonaws.com, api.hummingbird.businessreview.global, *.wps.cn, i.at.qq.com, ssl-api.itranslateapp.com, *xmind.*, sia.gikken.co, *.xiuxiu.meitu.com, api.posters.meitu.com, xremit.xcurrency.com, explorer.tratao.com, www.skyjos.cn, service.ilovepdf.com, cubox.*, accounts.agenda.com, *.aoscdn.com, *.apsapp.cn, spclient.wg.spotify.com, *.camscanner.com, *.intsig.net, mb3admin.com, *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, lcs-mobile-cops.adobe.io, nicegram.cloud, restore-access.indream.app, buy.itunes.apple.com, api.revenuecat.com, fl*app.com
