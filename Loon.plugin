@@ -199,7 +199,7 @@ http-response ^https?:\/\/cdn-bm\.camera360\.com\/api\/(mix\/(getinfo|purchase|r
 #************************************#
 # 小熊油耗
 # hostname = www.xiaoxiongyouhao.com
-http-response ^https?:\/\/www\.xiaoxiongyouhao\.com\/api\/vip\/index.+ script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/xiaoxiongyouhao.js, requires-body=true, tag=小熊油耗
+http-response ^https?:\/\/www\.xiaoxiongyouhao\.com\/api\/vip\/index.+ script-path=https://raw.githubusercontent.com/Daniel0829/Collections/Scripts/xiaoxiongyouhao.js, requires-body=true, tag=小熊油耗
 
 #***********************************#
 [MITM]
