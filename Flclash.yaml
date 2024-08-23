@@ -69,7 +69,7 @@ dns:
     'geosite:gfw,geolocation-!cn': [quic://223.5.5.5, quic://223.6.6.6, https://1.12.12.12/dns-query, https://120.53.53.53/dns-query]
 
 # 锚点参数
-pg: &pg {type: select, proxies: [🚀 手动切换, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇨🇳 台湾节点, 🎯 DIRECT]}
+pg: &pg {type: select, proxies: [🚀 手动切换, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇨🇳 台湾节点, DIRECT]}
 url-test: &url-test {type: url-test, url: http://connectivitycheck.gstatic.com/generate_204, interval: 300, tolerance: 0, include-all: true}
 select: &select {type: select, include-all: true}
 fallback: &fallback {type: fallback, url: http://connectivitycheck.gstatic.com/generate_204, interval: 300, include-all: true}
@@ -78,7 +78,7 @@ c: &c {type: http, behavior: classical, format: text, interval: 86400}
 
 proxy-groups:
 
-  - {name: 🚀 手动切换, type: select, include-all: true, proxies: [🇭🇰 香港节点, 🇺🇸 美国节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇨🇳 台湾节点, 🎯 DIRECT]}
+  - {name: 🚀 手动切换, type: select, include-all: true, proxies: [🇭🇰 香港节点, 🇺🇸 美国节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇨🇳 台湾节点, DIRECT]}
   - {name: 🌍 国外网站, <<: *pg}
   - {name: 📺 国际媒体, <<: *pg}
   - {name: 🍎 苹果服务, <<: *pg}
@@ -89,7 +89,7 @@ proxy-groups:
   - {name: 🤖 AI, <<: *pg}
   - {name: 🎮 游戏平台, <<: *pg}
   - {name: 🎞️ Emby, <<: *pg, include-all: true}
-  - {name: 🛑 广告拦截, type: select, proxies: [🛑 REJECT, 🎯 DIRECT]}
+  - {name: 🛑 广告拦截, type: select, proxies: [REJECT, DIRECT]}
   - {name: 🕸️ 兜底分流, <<: *pg}
   - {name: 🇭🇰 香港节点, <<: *url-test, filter: "(?i)🇭🇰|香港|(\b(HK|Hong)\b)"}
   - {name: 🇺🇸 美国节点, <<: *url-test, filter: "(?i)🇺🇸|美国|洛杉矶|圣何塞|(\b(US|United States)\b)"}
@@ -137,7 +137,7 @@ rules:
   - GEOSITE,github,Ⓜ️ 微软服务
   - GEOSITE,microsoft,Ⓜ️ 微软服务
   - GEOSITE,gfw,🌍 国外网站
-  - RULE-SET,China,🎯 DIRECT
-  - GEOIP,lan,🎯 DIRECT
-  - GEOIP,CN,🎯 DIRECT
+  - RULE-SET,China,DIRECT
+  - GEOIP,lan,DIRECT
+  - GEOIP,CN,DIRECT
   - MATCH,🕸️ 兜底分流
