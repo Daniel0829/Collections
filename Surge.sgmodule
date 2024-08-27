@@ -61,8 +61,8 @@ Ps = type=http-response,pattern=^https:\/\/lcs-mobile-cops\.adobe\.io\/(mobile_p
 #***********************************#
 # Spotify (不能超高音质)
 # hostname = spclient.wg.spotify.com
-Spotify-json = type=http-request,pattern=^https?:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/,requires-body=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js
-Spotify-proto = type=http-response,pattern=^https?:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js,script-update-interval=0
+Spotify-json = type=http-request,pattern=^https?:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/,requires-body=0,script-path=https://raw.githubusercontent.com/Daniel0829/Collections/Scripts/spotify-json.js
+Spotify-proto = type=http-response,pattern=^https?:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/Daniel0829/Collections/Scripts/spotify-proto.js,script-update-interval=0
 
 #***********************************#
 # 傲软抠图，傲软扫描，傲软PDF转换，傲软PDF编辑，傲软投屏，咖映，轻闪PDF，乃糖小组件，佐糖，佐糖照片修复
@@ -135,16 +135,6 @@ Hyperweb = type=http-response,pattern=^https?:\/\/zy6kcqa01a\.execute-api\.us-ea
 Notability = type=http-response,pattern=^https?:\/\/notability\.com\/(global|subscriptions),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/notability.js
 
 #***********************************#
-# 牛津高阶词典第十版
-# hostname = oxfordx.cp.com.cn
-牛津高阶词典 = type=http-response,pattern=^https:\/\/oxfordx\.cp\.com\.cn\/api\/pay\/apple_notify,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/niujin10.js
-
-#***********************************#
-# Flightradar24
-# hostname = mobile.flightradar24.com
-Flightradar24 = type=http-response,pattern=^https:\/\/mobile\.flightradar24\.com\/mobile\/(user-session|subscribe),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Flightradar24.js
-
-#***********************************#
 # exping地图标记
 # hostname = api.expingworld.com
 exping地图标记 = type=http-response,pattern=^https?:\/\/api\.expingworld\.com\/users,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/exping.js
@@ -165,20 +155,10 @@ FT/天气预报 = type=http-response,pattern=^https?:\/\/.*\.cloudfront\.net\/(i
 MIX-滤镜大师 = type=http-response,pattern=^https?:\/\/cdn-bm\.camera360\.com\/api\/(mix\/(getinfo|purchase|recovery)|iap\/check-receipt),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/mix.js
 
 #***********************************#
-# 小熊油耗
-# hostname = www.xiaoxiongyouhao.com
-小熊油耗 = type=http-response,pattern=^https?:\/\/www\.xiaoxiongyouhao\.com\/api\/vip\/index.+,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/xiaoxiongyouhao.js
-
-#***********************************#
-# Duet Display/DuetAir
-# hostname = rdp.duetdisplay.com
-DuetDisplay = type=http-response,pattern=^https?:\/\/rdp\.duetdisplay\.com\/v1\/users\/validateReceipt,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/DuetDisplay.js
-
-#***********************************#
 # flapp
 # hostname = fl*app.com
 flomo = type=http-response,pattern=^https:\/\/fl.*app\.com\/api\/v\d\/user\/me,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/lofo.js
 
 #***********************************#
 [MITM]
-hostname = %APPEND% bd-api.kuwo.cn, rdp.duetdisplay.com, epbox.gongfudou.com, www.xiaoxiongyouhao.com, cdn-bm.camera360.com, *.cloudfront.net, ftmailbox.cn, backend.getdrafts.com, api.expingworld.com, mobile.flightradar24.com, oxfordx.cp.com.cn, notability.com, zy6kcqa01a.execute-api.us-east-2.amazonaws.com, api.hummingbird.businessreview.global, *.wps.cn, i.at.qq.com, ssl-api.itranslateapp.com, *xmind.*, sia.gikken.co, *.xiuxiu.meitu.com, api.posters.meitu.com, xremit.xcurrency.com, explorer.tratao.com, service.ilovepdf.com, cubox.*, accounts.agenda.com, *.aoscdn.com, *.apsapp.cn, spclient.wg.spotify.com, *.camscanner.com, *.intsig.net, *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, lcs-mobile-cops.adobe.io, buy.itunes.apple.com, api.revenuecat.com，fl*app.com
+hostname = %APPEND% bd-api.kuwo.cn, epbox.gongfudou.com, cdn-bm.camera360.com, *.cloudfront.net, ftmailbox.cn, backend.getdrafts.com, api.expingworld.com, notability.com, zy6kcqa01a.execute-api.us-east-2.amazonaws.com, api.hummingbird.businessreview.global, *.wps.cn, i.at.qq.com, ssl-api.itranslateapp.com, *xmind.*, sia.gikken.co, *.xiuxiu.meitu.com, api.posters.meitu.com, xremit.xcurrency.com, explorer.tratao.com, service.ilovepdf.com, cubox.*, accounts.agenda.com, *.aoscdn.com, *.apsapp.cn, spclient.wg.spotify.com, *.camscanner.com, *.intsig.net, *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, lcs-mobile-cops.adobe.io, buy.itunes.apple.com, api.revenuecat.com，fl*app.com
