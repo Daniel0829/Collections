@@ -70,6 +70,7 @@ const list = {
   'vpn': { cm: 'timea', hx: 'hxpda', id: "yearautorenew", latest: "Daniel" },  //VPN-unlimited
   'com.teadoku.flashnote': { cm: 'timea', hx: 'hxpda', id: "pro_ios_ipad_mac", latest: "Daniel" },  //AnkiNote
   'com.tapuniverse.texteditor': { cm: 'timea', hx: 'hxpda', id: "com.tapuniverse.texteditor.w", latest: "Daniel" }  //TextEditor
+  'com.risingcabbage.pro.camera': { cm: 'timea', hx: 'hxpda', id: "com.risingcabbage.pro.camera.yearlysubscription", latest: "Daniel" },  //ReLens相机
 };
 
 //内购数据变量
