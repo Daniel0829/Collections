@@ -1,0 +1,8 @@
+#!name=flomo
+#!desc=flomo
+
+[Script]
+flomo = type=http-request, pattern=^https:\/\/flomoapp\.com\/api\/v1\/user\/me, script-path=https://raw.githubusercontent.com/Daniel0829/Collections/refs/heads/Scripts/flomo.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% flomoapp.com
