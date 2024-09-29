@@ -3,25 +3,8 @@
 #!author = Daniel
 #!desc=解锁App规则
 
-#============【使用说明】==============#
-# 使用声明：作者并未参与任何形式的金钱交易，仅限测试和学习，请勿转载与贩卖，下载使用后24小时请删除⚠️⚠️⚠️⚠️⚠️
-
-# 使用方法：先开脚本再打开App，自动会生效，如果无效就关了重开或者按一下恢复购买，在还不行就卸载App重新安装！最后还不行的话就是脚本失效了！
-
-# 特别说明：此脚本可能会导致App Store无法登录/下载
-
-# 解决方法：关[MITM][脚本][代理工具]方法选一即可
-
-# 已解锁App下载地址：https://too.st/iTunes
-
 #=============UserScript=============#
-[URL Rewrite]
-# 彩云天气去广告
-^https?:\/\/ad\.(caiyunapp|cyapi)\.(cn|com) - reject
-
 [Map Local]
-# 彩云天气去广告
-^http:\/\/adx\.sogaha\.cn\/sdk\/ad\/get data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 # 酷我听书_Blockad
 https?:\/\/audiobookpay\.kuwo\.cn/a\.p\?op=get_advertright data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 # 酷我听书_Blockad
@@ -46,12 +29,6 @@ iTunes = type=http-response,pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyR
 # PS 图片编辑
 # hostname = lcs-mobile-cops.adobe.io
 Ps = type=http-response,pattern=^https:\/\/lcs-mobile-cops\.adobe\.io\/(mobile_profile|mobiles\/access_profile),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Ps.js
-
-#***********************************#
-# 彩云天气
-# hostname = *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn
-彩云天气-SVIP会员 = type=http-response,pattern=^https?:\/\/(biz|wrapper|starplucker)\.(cyapi|caiyunapp)\.(cn|com)\/(.+\/(user\?app_name|activity\?app_name|visitors|operation\/banners)|p\/v\d\/(vip_info|user_info)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyuntianqi.js
-彩云天气-SVIP地图 = type=http-request,pattern=^https?:\/\/(api|wrapper)\.(cyapi|caiyunapp)\.(cn|com)\/v\d\/(satellite|nafp\/origin_images),requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyuntianqi.js
 
 #***********************************#
 # 扫描全能王
@@ -105,10 +82,5 @@ Drafts = type=http-response,pattern=^https?:\/\/backend\.getdrafts\.com\/api\/v\
 FT/天气预报 = type=http-response,pattern=^https?:\/\/.*\.cloudfront\.net\/(index\.php\/jsapi\/(paywall|get_story_more_info)|mobile\/verify),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/cloudfront.js
 
 #***********************************#
-# flapp
-# hostname = fl*app.com
-flomo = type=http-response,pattern=^https:\/\/fl.*app\.com\/api\/v\d\/user\/me,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/lofo.js
-
-#***********************************#
 [MITM]
-hostname = %APPEND% api.revenuecat.com, buy.itunes.apple.com, lcs-mobile-cops.adobe.io, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, *.camscanner.com, *.intsig.net, spclient.wg.spotify.com, cubox.*, xremit.xcurrency.com, explorer.tratao.com, *.wps.cn, zy6kcqa01a.execute-api.us-east-2.amazonaws.com, notability.com, api.expingworld.com, backend.getdrafts.com, *.cloudfront.net, ftmailbox.cn, fl*app.com
+hostname = %APPEND% api.revenuecat.com, buy.itunes.apple.com, lcs-mobile-cops.adobe.io, *.camscanner.com, *.intsig.net, spclient.wg.spotify.com, cubox.*, xremit.xcurrency.com, explorer.tratao.com, *.wps.cn, zy6kcqa01a.execute-api.us-east-2.amazonaws.com, notability.com, api.expingworld.com, backend.getdrafts.com, *.cloudfront.net, ftmailbox.cn
