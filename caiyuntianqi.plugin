@@ -1,0 +1,20 @@
+#!name=caiyuntianqi
+#!desc=caiyuntianqi
+#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1070.png
+
+[Rule]
+# 禁用上传信息 - 来源: @苍井灰灰
+DOMAIN,gather.colorfulclouds.net,REJECT
+
+[Script]
+# 广告净化/弹窗AD/去除亲友卡/去除悬浮模块
+http-response ^https?:\/\/(ad|biz|wrapper|starplucker)\.cyapi\.cn\/.+\/((activity\?app_name|operation|config|req\?app_name=weather)|v\d\/(trial_card\/info|entries|friend_cards|token\/device)) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyuntianqi.js, requires-body=true, timeout=60, tag=caiyuntianqi
+
+# VIP信息
+http-response ^https?:\/\/(biz|wrapper|starplucker)\.cyapi\.cn\/(v\d\/user\?app_name|.+\/v\d\/(vip_info|user_detail)) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyuntianqi.js, requires-body=true, timeout=60, tag=caiyuntianqi
+
+# SVIP地图-48小时预报
+http-request ^https?:\/\/(api|wrapper)\.cyapi\.cn\/v\d\/(satellite|nafp\/origin_images) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyuntianqi.js, timeout=60, tag=caiyuntianqi
+
+[MITM]
+hostname = *.cyapi.cn
