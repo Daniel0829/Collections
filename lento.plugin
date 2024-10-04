@@ -1,0 +1,8 @@
+#!name=lento
+#!desc=lento
+
+[Script]
+http-response ^https?:\/\/lentoapp\.com:8081\/getUserMemberShipInfo script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/lento.js, requires-body=true, timeout=60, tag=lento
+
+[MITM]
+hostname = lentoapp.com
