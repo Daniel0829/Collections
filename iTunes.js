@@ -22,52 +22,11 @@ const yearlyid = `${bundle_id}.yearly`;
 const yearlysubscription = `${bundle_id}.yearlysubscription`;
 
 const list = {
-  'VDIT': { cm: 'timea', hx: 'hxpda', id: "me.imgbase.videoday.profeaturesYearly", latest: "Daniel" }, //VDIT-视频转换
-  'FastPlayer': { cm: 'timea', hx: 'hxpda', id: "VideoPlayer_ProVersion", latest: "Daniel" }, //万能播放器
-  'SimpleNotation': { cm: 'timeb', hx: 'hxpda', id: "com.xinlin.notation.once", latest: "Daniel" }, //简谱大师
-  'Xfuse': { cm: 'timeb', hx: 'hxpda', id: "com.xfuse.ProVision", latest: "Daniel" }, //磁力宅播放器
-  'com.BertonYc.ScannerOCR': { cm: 'timeb', hx: 'hxpda', id: "Scanner_Subscibe_Permanent", latest: "Daniel" }, //万能扫描王
-  'Rookie': { cm: 'timea', hx: 'hxpda', id: "com.jellybus.Rookie.IAP.PRO5999", latest: "Daniel" },//RKCAM
-  'MoneyWiz': { cm: 'timea', hx: 'hxpda', id: "com.moneywiz.personalfinance.1year", latest: "Daniel" }, //MoneyWiz-个人财务
   'Overdrop': { cm: 'timeb', hx: 'hxpda', id: "com.weather.overdrop.forever", latest: "Daniel" }, //Overdrop-天气预报
-  'PDFReaderPro%20Free': { cm: 'timeb', hx: 'hxpda', id: "com.pdfreaderpro.free.member.all_access_pack_permanent_license.001", latest: "Daniel" }, //PDFReaderProFree
-  'OneExtractor': { cm: 'timeb', hx: 'hxpda', id: "com.OneExtractor.Video.Forever", latest: "Daniel" }, //视频提取器
-  'com.Colin.Colors': { cm: 'timea', hx: 'hxpda', id: "com.colin.colors.annualVIP", latest: "Daniel" }, //搜图
-  'PhotosSorter': { cm: 'timeb', hx: 'hxpda', id: "sorter.pro.ipa", latest: "Daniel" }, //Sorter-相册整理
-  'intolive': { cm: 'timea', hx: 'hxpda', id: "me.imgbase.intolive.proSubYearly", latest: "Daniel" }, //intolive-实况壁纸制作器
-  'MyAlbum': { cm: 'timeb', hx: 'hxpda', id: "com.colin.myalbum.isUpgradeVip", latest: "Daniel" }, //Cleaner-照片管理
-  'VideoEditor': { cm: 'timeb', hx: 'hxpda', id: "com.god.videohand.alwaysowner", latest: "Daniel" }, //VideoShot
-  'PhotoMovie': { cm: 'timea', hx: 'hxpda', id: "com.mediaeditor.photomovie.year", latest: "Daniel" }, //PhotoMovie-照片视频
-  'GreetingScanner': { cm: 'timea', hx: 'hxpda', id: "com.alphaplus.greetingscaner.w.b", latest: "Daniel" },  //扫描识别王
-  'Again': { cm: 'timeb', hx: 'hxpda', id: "com.owen.again.profession", latest: "Daniel" },  //Again-稍后阅读器
-  'remotelg': { cm: 'timeb', hx: 'hxpda', id: "com.gqp.remotelg.lifetime", latest: "Daniel" },  //UniversalRemoteTV+ 遥控器
-  'Notebook': { cm: 'timea', hx: 'hxpda', id: "com.zoho.notebook.ios.personal.yearly", latest: "Daniel" },  //Notebook
-  'com.damon.dubbing': { cm: 'timea', hx: 'hxpda', id: "com.damon.dubbing.vip12", latest: "Daniel" },  //有声英语绘本
-  'ZHUBEN': { cm: 'timea', hx: 'hxpda', id: "com.xiaoyu.yue", latest: "Daniel" },  //有声英语绘本
-  'XIAOTangHomeParadise': { cm: 'timea', hx: 'hxpda', id: "com.yuee.mo2", latest: "Daniel" },  //鸿海幼儿启蒙
   'habitdot': { cm: 'timeb', hx: 'hxpda', id: "habitdots_pro_forever", latest: "Daniel" },  //习惯点点
-  'com.eleven.chatgpt': { cm: 'timea', hx: 'hxpda', id: "com.eleven.chatgpt.yearly", latest: "Daniel" },  //ChatAI
-  'MWeb%20iOS': { cm: 'timeb', hx: 'hxpda', id: "10001", latest: "Daniel" },  //MWeb-编辑器/笔记/发布
   'com.traveltao.ExchangeAssistant': { cm: 'timea', hx: 'hxpda', id: "lxbyplus", latest: "Daniel" },  //极简汇率(需试用)
-  'Mindkit': { cm: 'timeb', hx: 'hxpda', id: "mindkit_permanently", latest: "Daniel" },  //Mindkit
-  'DailySpending': { cm: 'timea', hx: 'hxpda', id: "com.xxtstudio.dailyspending.year", latest: "Daniel" },  //Daily记账
-  'Reader': { cm: 'timeb', hx: 'hxpda', id: "com.xiaoqi.reader.forever", latest: "Daniel" },  //爱阅读-TXT阅读器
-  'com.photoslab.ai.writerassistant': { cm: 'timea', hx: 'hxpda', id: "com.photoslab.ai.writerassistant.year", latest: "Daniel" },  //Smart AI
   'WaterMaskCamera': { cm: 'timea', hx: 'hxpda', id: "com.camera.watermark.yearly.3dayfree", latest: "Daniel" },  //徕卡水印相机
-  'SymbolKeyboard': { cm: 'timeb', hx: 'hxpda', id: "fronts.keyboard.singingfish.one", latest: "Daniel" },  //Fonts花样字体
-  'com.kuaijiezhilingdashi.appname': { cm: 'timea', hx: 'hxpda', id: "com.othermaster.yearlyvip", latest: "Daniel" },  //快捷指令库
   'LogInput': { cm: 'timea', hx: 'hxpda', id: "com.logcg.loginput", latest: "Daniel" },  //落格输入法
-  'LifeTracker': { cm: 'timea', hx: 'hxpda', id: "com.dk.lifetracker.yearplan", latest: "Daniel" },  //Becord生活记录
-  'com.chenxi.shanniankapian': { cm: 'timea', hx: 'hxpda', id: "com.chenxi.shannian.superNian", latest: "Daniel" },  //闪念
-  '%E5%BD%95%E9%9F%B3%E4%B8%93%E4%B8%9A%E7%89%88': { cm: 'timea', hx: 'hxpda', id: "com.winat.recording.pro.yearly", latest: "Daniel" },  //录音专业版
-  'com.readdle.CalendarsLite': { cm: 'timea', hx: 'hxpda', id: "com.readdle.CalendarsLite.subscription.year20trial7", latest: "Daniel" },  //Calendars-日历/计划
-  'com.readdle.ReaddleDocsIPad': { cm: 'timea', hx: 'hxpda', id: "com.readdle.ReaddleDocsIPad.subscription.month10_allusers", latest: "Daniel" },  //Documents
-  'com.zijayrate.analogcam': { cm: 'timea', hx: 'hxpda', id: "com.zijayrate.analogcam.vipforever10", latest: "Daniel" },  //oldroll复古相机
-  'DoMemo': { cm: 'timea', hx: 'hxpda', id: "org.zrey.fastnote.yearly", latest: "Daniel" },  //DoMemo
-  'com.yengshine.proccd': { cm: 'timea', hx: 'hxpda', id: "com.yengshine.proccd.yearly", latest: "Daniel" },  //ProCCD相机
-  'com.palmmob.pdfios': { cm: 'timea', hx: 'hxpda', id: "com.palmmob.pdfios.168", latest: "Daniel" },  //图片PDF转换器
-  'Habbit': { cm: 'timea', hx: 'hxpda', id: "HabitUpYearly", latest: "Daniel" },  //习惯清单
-  'vpn': { cm: 'timea', hx: 'hxpda', id: "yearautorenew", latest: "Daniel" },  //VPN-unlimited
   'com.teadoku.flashnote': { cm: 'timea', hx: 'hxpda', id: "pro_ios_ipad_mac", latest: "Daniel" },  //AnkiNote
   'com.tapuniverse.texteditor': { cm: 'timea', hx: 'hxpda', id: "com.tapuniverse.texteditor.w", latest: "Daniel" }  //TextEditor
   'com.risingcabbage.pro.camera': { cm: 'timea', hx: 'hxpda', id: "com.risingcabbage.pro.camera.yearlysubscription", latest: "Daniel" },  //ReLens相机
