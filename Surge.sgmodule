@@ -26,11 +26,6 @@ revenuecat2 = type=http-request,pattern= ^https?:\/\/api\.revenuecat\.com\/.+\/(
 iTunes = type=http-response,pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Daniel0829/Collections/Scripts/iTunes.js
 
 #***********************************#
-# PS 图片编辑
-# hostname = lcs-mobile-cops.adobe.io
-Ps = type=http-response,pattern=^https:\/\/lcs-mobile-cops\.adobe\.io\/(mobile_profile|mobiles\/access_profile),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Ps.js
-
-#***********************************#
 # 扫描全能王
 # hostname = *.camscanner.com, *.intsig.net
 扫描全能王 = type=http-response,pattern=^https?:\/\/.*\.(intsig\.net|camscanner\.com),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/CamScanner.js
@@ -62,16 +57,6 @@ WPS = type=http-response,pattern=^https?:\/\/(vas|account|drive)\.wps\.cn\/(quer
 Hyperweb = type=http-response,pattern=^https?:\/\/zy6kcqa01a\.execute-api\.us-east-2\.amazonaws\.com\/prod\/verifyReceipt,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Hyperweb.js
 
 #***********************************#
-# Notability
-# hostname = notability.com
-Notability = type=http-response,pattern=^https?:\/\/notability\.com\/(global|subscriptions),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/notability.js
-
-#***********************************#
-# exping地图标记
-# hostname = api.expingworld.com
-exping地图标记 = type=http-response,pattern=^https?:\/\/api\.expingworld\.com\/users,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/exping.js
-
-#***********************************#
 # Drafts
 # hostname = backend.getdrafts.com
 Drafts = type=http-response,pattern=^https?:\/\/backend\.getdrafts\.com\/api\/v\d\/verification\/(account_status|verify_receipt),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Drafts.js
@@ -83,4 +68,4 @@ FT/天气预报 = type=http-response,pattern=^https?:\/\/.*\.cloudfront\.net\/(i
 
 #***********************************#
 [MITM]
-hostname = %APPEND% api.revenuecat.com, buy.itunes.apple.com, lcs-mobile-cops.adobe.io, *.camscanner.com, *.intsig.net, spclient.wg.spotify.com, cubox.*, xremit.xcurrency.com, explorer.tratao.com, *.wps.cn, zy6kcqa01a.execute-api.us-east-2.amazonaws.com, notability.com, api.expingworld.com, backend.getdrafts.com, *.cloudfront.net, ftmailbox.cn
+hostname = %APPEND% api.revenuecat.com, buy.itunes.apple.com, *.camscanner.com, *.intsig.net, spclient.wg.spotify.com, cubox.*, xremit.xcurrency.com, explorer.tratao.com, *.wps.cn, zy6kcqa01a.execute-api.us-east-2.amazonaws.com, backend.getdrafts.com, *.cloudfront.net, ftmailbox.cn
