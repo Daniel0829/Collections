@@ -24,8 +24,6 @@
 https?:\/\/audiobookpay\.kuwo\.cn/a\.p\?op=get_advertright - reject-dict
 # 酷我听书_Blockad
 https?:\/\/omp-audiobookpay\.lrts\.me\/a\.p\?op=get_advertright - reject-dict
-# 牛津高阶词典-去除首页下方广告
-^https:\/\/oxadmin\.cp\.com\.cn\/api\/(hot\/index|advertise\/banner) - reject-dict
 # FT中文网AD
 ^https?:\/\/ftmailbox\.cn\/ad_impression\/.+ - reject-200
 
@@ -42,21 +40,6 @@ http-request ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?
 http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path=https://raw.githubusercontent.com/Daniel0829/Collections/Scripts/iTunes.js, requires-body=true, tag=iTunes解锁系列
 
 #***********************************#
-# Nicegram
-# hostname = restore-access.indream.app
-http-response ^https?:\/\/restore-access\.indream\.app\/restoreAccess script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/nicegram.js, requires-body=true, tag=Nicegram
-
-#***********************************#
-# PS 图片编辑
-# hostname = lcs-mobile-cops.adobe.io
-http-response ^https:\/\/lcs-mobile-cops\.adobe\.io\/(mobile_profile|mobiles\/access_profile) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Ps.js, requires-body=true, tag=Photoshop Express图片编辑
-
-#***********************************#
-# Emby(解锁播放权限)
-# hostname = mb3admin.com
-http-response ^https?:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/embycrack.js, requires-body=true, tag=Emby(解锁播放权限)
-
-#***********************************#
 # 扫描全能王
 # hostname = *.camscanner.com, *.intsig.net
 http-response ^https?:\/\/.*\.(intsig\.net|camscanner\.com) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/CamScanner.js, requires-body=true, tag=全能扫描王
@@ -68,59 +51,14 @@ http-request ^https?:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|alb
 http-response ^https?:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js, requires-body=true, binary-body-mode=true, timeout=10, tag=Spotify-Proto
 
 #***********************************#
-# 傲软抠图，傲软扫描，傲软PDF转换，傲软PDF编辑，傲软投屏，咖映，轻闪PDF，乃糖小组件，佐糖，佐糖照片修复
-# hostname = *.aoscdn.com, *.apsapp.cn
-http-response ^https?:\/\/.*\.(aoscdn\.com|apsapp\.cn) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/arqjt.js, requires-body=true, tag=傲软系列解锁
-
-#***********************************#
-# Agenda
-# hostname = accounts.agenda.com
-http-response ^https?:\/\/accounts\.agenda\.com\/users\/.*\/license script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Ag.js, requires-body=true, tag=Agenda
-
-#***********************************#
 # Cubox-收藏阅读
 # hostname = cubox.*
 http-response ^https?:\/\/cubox\.(pro|cc)\/.+\/api\/userInfo script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Cb.js, requires-body=true, tag=Cubox-收藏阅读
 
 #***********************************#
-# iLove PDF
-# hostname = service.ilovepdf.com
-http-response ^https?:\/\/service\.ilovepdf\.com\/.+\/user script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/ilove.js, requires-body=true, tag=iLove PDF
-
-#***********************************#
-# 猫头鹰文件管理
-# hostname = www.skyjos.cn
-http-response ^https?:\/\/www\.skyjos\.cn script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/mtywj.js, requires-body=true, tag=猫头鹰文件管理
-
-#***********************************#
 # 极简汇率
 # hostname = xremit.xcurrency.com, explorer.tratao.com
 http-response ^https?:\/\/(xremit\.xcurrency|explorer.tratao)\.com\/api\/client\/xtool\/vip script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/jijianhuilv.js, requires-body=true, tag=极简汇率
-
-#***********************************#
-# 美图秀秀
-# hostname = *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com
-http-response ^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.+\/(vip|user|h\d|center|home) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/mtxx.js, requires-body=true, tag=美图秀秀
-
-#***********************************#
-# Mate-翻译神器
-# hostname = asia.gikken.co
-http-response ^https?:\/\/asia\.gikken\.co\/matesync\/(subscription|login|register_user|check_user) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/mate.js, requires-body=true, tag=Mate-翻译神器
-
-#***********************************#
-# Xmind-思维导图
-# hostname = *xmind.*
-http-response ^https?:\/\/(?:www\.)?xmind\..*\/.+\/(devices|token\/.+) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Xmind.js, requires-body=true, tag=Xmind
-
-#***********************************#
-# iTranslate 翻译
-# hostname = ssl-api.itranslateapp.com
-http-response ^https?:\/\/ssl-api\.itranslateapp\.com\/accounts\/.+\/(subscriptions\/verify|marketing\/consent\/status) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/itranslate.js, requires-body=true, tag=iTranslate翻译
-
-#***********************************#
-# 微信听书
-# hostname = i.at.qq.com
-http-response ^https?:\/\/i\.at\.qq\.com\/pay\/memberinfo.+ script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/wxts.js, requires-body=true, tag=微信听书
 
 #***********************************#
 # WPS Office
@@ -133,39 +71,9 @@ http-response ^https?:\/\/(vas|account|drive)\.wps\.cn\/(query\/api\/.+\/list_pu
 http-response ^https:\/\/api\.hummingbird\.businessreview\.global\/api\/subscriptions\/get_active script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/jjxrsl.js, requires-body=true, tag=经济学人
 
 #************************************#
-# flapp
-# hostname = fl*app.com
-http-response ^https:\/\/fl.*app\.com\/api\/v\d\/user\/me script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/flomo.js, requires-body=true, tag=flapp
-
-#************************************#
 # Hyperweb Safari浏览器扩展
 # hostname = zy6kcqa01a.execute-api.us-east-2.amazonaws.com
 http-response ^https?:\/\/zy6kcqa01a\.execute-api\.us-east-2\.amazonaws\.com\/prod\/verifyReceipt script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Hyperweb.js, requires-body=true, tag=Hyperweb
-
-#***********************************#
-# Notability
-# hostname = notability.com
-http-response ^https?:\/\/notability\.com\/(global|subscriptions) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/notability.js, requires-body=true, tag=Notability
-
-#***********************************#
-# 解锁10个APP，包含APP：Filmicpro，Focos，Focos live，Splice，30 Day Fitness，Sleep，Remini，Yoga Wave，Firstlight，Doubletake
-# hostname = *.oracle.bendingspoonsapps.com
-http-response ^https?:\/\/.*\.oracle\.bendingspoonsapps\.com\/v\d\/(users\/.+|purchases\/verify) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/bending.js, requires-body=true, tag=bending
-
-#***********************************#
-# 牛津高阶词典第十版
-# hostname = oxfordx.cp.com.cn
-http-response ^https:\/\/oxfordx\.cp\.com\.cn\/api\/pay\/apple_notify script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/niujin10.js, requires-body=true, tag=牛津高阶词典
-
-#***********************************#
-# Flightradar24
-# hostname = mobile.flightradar24.com
-http-response ^https:\/\/mobile\.flightradar24\.com\/mobile\/(user-session|subscribe) script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Flightradar24.js, requires-body=true, tag=Flightradar24
-
-#***********************************#
-# exping地图标记
-# hostname = api.expingworld.com
-http-response ^https?:\/\/api\.expingworld\.com\/users script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/exping.js, requires-body=true, tag=exping地图标记
 
 #***********************************#
 # Drafts
@@ -173,25 +81,10 @@ http-response ^https?:\/\/api\.expingworld\.com\/users script-path=https://raw.g
 http-response ^https?:\/\/backend\.getdrafts\.com\/api\/v\d\/verification\/(account_status|verify_receipt) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Drafts.js, requires-body=true, tag=Drafts
 
 #***********************************#
-# Hydra相机
-# hostname = creaceed.com
-http-response ^https?:\/\/creaceed\.com\/apis\/appstore\/verifyreceipt script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Hydra.js, requires-body=true, tag=Hydra
-
-#***********************************#
 # FT中文网/RainViewer天气预报
 # hostname = *.cloudfront.net, ftmailbox.cn
 http-response ^https?:\/\/.*\.cloudfront\.net\/(index\.php\/jsapi\/(paywall|get_story_more_info)|mobile\/verify) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/cloudfront.js, requires-body=true, tag=cloudfront
 
 #***********************************#
-# MIX-滤镜大师
-# hostname = cdn-bm.camera360.com
-http-response ^https?:\/\/cdn-bm\.camera360\.com\/api\/(mix\/(getinfo|purchase|recovery)|iap\/check-receipt) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/mix.js, requires-body=true, tag=MIX-滤镜大师
-
-#************************************#
-# 小熊油耗
-# hostname = www.xiaoxiongyouhao.com
-http-response ^https?:\/\/www\.xiaoxiongyouhao\.com\/api\/vip\/index.+ script-path=https://raw.githubusercontent.com/Daniel0829/Collections/Scripts/xiaoxiongyouhao.js, requires-body=true, tag=小熊油耗
-
-#***********************************#
 [MITM]
-hostname = bd-api.kuwo.cn, epbox.gongfudou.com, www.xiaoxiongyouhao.com, cdn-bm.camera360.com, *.cloudfront.net, ftmailbox.cn, kkr-creaceed.com, backend.getdrafts.com, api.expingworld.com, mobile.flightradar24.com, oxfordx.cp.com.cn, *.oracle.bendingspoonsapps.com, notability.com, zy6kcqa01a.execute-api.us-east-2.amazonaws.com, api.hummingbird.businessreview.global, *.wps.cn, i.at.qq.com, ssl-api.itranslateapp.com, *xmind.*, sia.gikken.co, *.xiuxiu.meitu.com, api.posters.meitu.com, xremit.xcurrency.com, explorer.tratao.com, www.skyjos.cn, service.ilovepdf.com, cubox.*, accounts.agenda.com, *.aoscdn.com, *.apsapp.cn, spclient.wg.spotify.com, *.camscanner.com, *.intsig.net, mb3admin.com, *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, lcs-mobile-cops.adobe.io, nicegram.cloud, restore-access.indream.app, buy.itunes.apple.com, api.revenuecat.com, fl*app.com
+hostname = bd-api.kuwo.cn, epbox.gongfudou.com, *.cloudfront.net, ftmailbox.cn, backend.getdrafts.com, zy6kcqa01a.execute-api.us-east-2.amazonaws.com, api.hummingbird.businessreview.global, *.wps.cn, xremit.xcurrency.com, explorer.tratao.com, cubox.*, spclient.wg.spotify.com, *.camscanner.com, *.intsig.net, *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me, buy.itunes.apple.com, api.revenuecat.com
