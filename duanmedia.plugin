@@ -1,0 +1,8 @@
+#!name=duanmeida
+#!desc=duanmeida
+
+[Script]
+http-response ^https?:\/\/app\.theinitium\.com\/subs\/initiummedia_subs\/verify_subscription script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/dcm.js, requires-body=true, timeout=60, tag=dcm
+
+[MITM]
+hostname = app.theinitium.com
