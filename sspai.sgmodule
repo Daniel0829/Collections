@@ -1,3 +1,6 @@
+#!name=sspai
+#!desc=sspai
+
 [Header Rewrite]
 ^https://cdnfile\.sspai\.com/ header-add Referer "sspai.com"
 
