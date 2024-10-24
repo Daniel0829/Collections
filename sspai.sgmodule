@@ -1,0 +1,6 @@
+[Header Rewrite]
+^https://cdnfile\.sspai\.com/ header-add Referer "sspai.com"
+
+[MITM]
+hostname = cdnfile.sspai.com
+
