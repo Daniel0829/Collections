@@ -62,4 +62,4 @@ FT/天气预报 = type=http-response,pattern=^https?:\/\/.*\.cloudfront\.net\/(i
 
 #***********************************#
 [MITM]
-hostname = %APPEND% api.revenuecat.com, buy.itunes.apple.com, *.camscanner.com, *.intsig.net, spclient.wg.spotify.com, cubox.*, xremit.xcurrency.com, explorer.tratao.com, *.wps.cn, zy6kcqa01a.execute-api.us-east-2.amazonaws.com, backend.getdrafts.com, *.cloudfront.net, ftmailbox.cn
+hostname = %APPEND% api.revenuecat.com, buy.itunes.apple.com, *.camscanner.com, *.intsig.net, cubox.*, xremit.xcurrency.com, explorer.tratao.com, *.wps.cn, zy6kcqa01a.execute-api.us-east-2.amazonaws.com, backend.getdrafts.com, *.cloudfront.net, ftmailbox.cn
