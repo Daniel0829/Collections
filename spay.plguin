@@ -1,0 +1,6 @@
+#!name=sspai
+#!desc=sspai
+
+[Rewrite]^https?://cdnfile.sspai.com url header-del Referer^https?://cdnfile.sspai.com url header-add Referer sspai.com
+
+[MITM]hostname = cdnfile.sspai.com
