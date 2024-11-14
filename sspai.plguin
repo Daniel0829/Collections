@@ -1,10 +1,9 @@
-#!name=少数派解锁图片
-#!desc=为少数派图片请求添加 Referer 请求头
-#!author=chatgpt
+#!name=sspai
+#!desc=sspai
 
 [Rewrite]
-^https://cdnfile\.sspai\.com/ header-add Referer sspai.com
+^https?:\/\/cdnfile\.sspai\.com header-del Referer
+^https?:\/\/cdnfile\.sspai\.com header-add Referer sspai.com
 
-[MITM]
+[Mitm]
 hostname = cdnfile.sspai.com
-
