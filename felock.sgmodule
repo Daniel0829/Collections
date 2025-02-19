@@ -1,0 +1,10 @@
+#!name=felo
+#!desc=felo
+
+[Script]
+felo = type=http-response, pattern=^https?:\/\/(translator|accounts).felo.me\/api\/user.*$, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/felo.js, requires-body=true, max-size=-1, timeout=60
+
+felock = type=http-request, pattern=^https?:\/\/translator.felo.me\/api\/translation\/thirdToken, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/felock.js, timeout=60
+
+[MITM]
+hostname = %APPEND% translator.felo.me, accounts.felo.me
