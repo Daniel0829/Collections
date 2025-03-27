@@ -10,7 +10,7 @@
 **************************************
 
 [rewrite_local]
-^https?:\/\/ifttt\.com\/api\/v\d\/graph url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/IFTTT.js
+^https?:\/\/ifttt\.com\/api\/v\d\/graph url script-response-body https://raw.githubusercontent.com/Daniel0829/Collections/refs/heads/Scripts/IFTTT.js
 
 [mitm]
 hostname = ifttt.com
