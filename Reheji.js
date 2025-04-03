@@ -48,7 +48,9 @@ const list = {
   'Spark': { name: 'premium', id: 'spark_5999_1y_1w0', cm: 'sja' },  //Spark_Mail-邮箱管理
   'Anybox': { name: 'pro', id: 'cc.anybox.Anybox.annual', cm: 'sja' },  //Anybox-跨平台书签管理
   'VSCO': { name: 'pro', id: 'vscopro_global_5999_annual_7D_free', cm: 'sja' }  //VSCO-照片与视频编辑
-  'Pillow': {name: 'premium', id: 'com.neybox.pillow.premium.yearly'}
+  'Sunlitt': { name: 'sunlitt.pro', id: 'pro.lifetime', cm: 'sjb' },  //Sunlitt-太阳位置
+  'Moonlitt': { name: 'moonlitt.pro', id: 'moonlitt.pro.lifetime', cm: 'sjb' },  //Moonlitt-月亮位置
+  'becoming': { name: 'Strength Pro', id: 'strength_membership_lifetime', cm: 'sjb' },  //练就
 };
 
 if (typeof $response == "undefined") {
