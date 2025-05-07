@@ -26,7 +26,7 @@ Reheji = type=http-response, pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com
 Reheji = type=http-request, pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), script-path=https://raw.githubusercontent.com/Daniel0829/Collections/refs/heads/Scripts/Reheji.js, timeout=60
 
 #iTunes-系列 hostname = buy.itunes.apple.com
-iTunes = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js, requires-body=true, max-size=-1, timeout=60
+iTunes = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/Daniel0829/Collections/refs/heads/Scripts/iTunes.js, requires-body=true, max-size=-1, timeout=60
 
 #彩云天气-广告净化/弹窗AD/去除亲友卡/去除悬浮模块 hostname = *.cyapi.cn
 caiyuntianqi = type=http-response, pattern=^https?:\/\/(ad|biz|wrapper|starplucker)\.cyapi\.cn\/.+\/((activity\?app_name|operation|config|req\?app_name=weather)|v\d\/(trial_card\/info|entries|friend_cards|token\/device)), script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyuntianqi.js, requires-body=true, max-size=-1, timeout=60
