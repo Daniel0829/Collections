@@ -33,7 +33,7 @@ const list = {
   'MoneyWiz': { cm: 'timea', hx: 'hxpda', id: "com.moneywiz.personalfinance.1year", latest: "ddm1023" }, //MoneyWiz-个人财务
   'Overdrop': { cm: 'timeb', hx: 'hxpda', id: "com.weather.overdrop.forever", latest: "ddm1023" }, //Overdrop-天气预报
   'com.chenxi.shanniankapian': { cm: 'timea', hx: 'hxpda', id: "com.chenxi.shannian.superNian", latest: "ddm1023" },  //闪念
-  'com.risingcabbage.pro.camera': { cm: 'timea', hx: 'hxpda', id: "com.risingcabbage.pro.camera.yearlysubscription", latest: "ddm1023" },  //ReLens相机
+  'FDSunAlly': { cm: 'timeb', hx: 'hxpda', id: "com.freenotes.sunally.lifetime" },  //SunAlly-智能健康助力
   'com.readdle.ReaddleDocsIPad': { cm: 'timea', hx: 'hxpda', id: "com.readdle.ReaddleDocsIPad.subscription.month10_allusers", latest: "ddm1023" },  //Documents
 };
 
