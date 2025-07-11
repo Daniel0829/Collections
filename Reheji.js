@@ -22,7 +22,7 @@ let obj = {}, ddm = JSON.parse(typeof $response != "undefined" && $response.body
 
 const headers = $request.headers, ua = headers['User-Agent'] || headers['user-agent'], bundle_id = headers['X-Client-Bundle-ID'] || headers['x-client-bundle-id'];
 
-const forbiddenApps = ['Rond', 'Filebar', 'Fileball', 'APTV', '车票票', 'eTicket', 'PureLibro'];
+const forbiddenApps = ['Rond', 'Filebar', 'Fileball', 'APTV', '车票票', 'eTicket', 'PureLibro', '喝水羊驼', 'waterllama'];
 if (forbiddenApps.some(app => (ua && ua.includes(app)) || ($request.body && $request.body.includes(app)))) {
   console.log("⛔️检测到禁止 MITM 的 APP，脚本停止运行！");
   $done({});
