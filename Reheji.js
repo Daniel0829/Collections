@@ -30,6 +30,7 @@ if (forbiddenApps.some(app => (ua && ua.includes(app)) || ($request.body && $req
 
 const bundle = {
 'com.valo.reader.vip2.forever', cm: 'sjb' },  //读不舍手
+'com.trainfitness.Train': { name: 'Pro', id: 'TrainAnnualSubscription', cm: 'sja' },  //TrainFitness 健身追踪器
 };
 
 const listua = {
