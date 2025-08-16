@@ -6,6 +6,10 @@
 [MITM]
 hostname = cdnfile.sspai.com, cdn.sspai.com
 
+[URL Rewrite]
+# 关键修复：强制触发MITM处理 ▼ 新增此行 ▼
+^https?:\/\/(cdnfile|cdn)\.sspai\.com  https://$1.sspai.com?bypass=1 302
+
 [Header Rewrite]
 ^https?:\/\/cdnfile\.sspai\.com header-del Referer
 ^https?:\/\/cdnfile\.sspai\.com header-add Referer sspai.com
