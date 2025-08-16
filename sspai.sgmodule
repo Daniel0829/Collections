@@ -2,8 +2,8 @@
 #!desc=sspai
 
 [Header Rewrite]
-^https?:\/\/cdnfile\.sspai\.com header-del Referer
-^https?:\/\/cdnfile\.sspai\.com header-add Referer sspai.com
+# 使用 header-replace 直接替换 Referer，并提供一个更标准的 URL
+^https?:\/\/cdnfile\.sspai\.com header-replace Referer https://sspai.com/
 
 [MITM]
 hostname = cdnfile.sspai.com
