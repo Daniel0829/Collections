@@ -1,10 +1,13 @@
-#!name=sspai
-#!desc=sspai
+#!name=sspai_fix
+#!desc=少数派图片防盗链修复
+#!author=FlowDown
+#!update=2025-08-16
+
+[MITM]
+hostname = cdnfile.sspai.com, cdn.sspai.com
 
 [Header Rewrite]
 ^https?:\/\/cdnfile\.sspai\.com header-del Referer
 ^https?:\/\/cdnfile\.sspai\.com header-add Referer sspai.com
-
-[MITM]
-hostname = cdnfile.sspai.com
-
+^https?:\/\/cdn\.sspai\.com header-del Referer
+^https?:\/\/cdn\.sspai\.com header-add Referer sspai.com
