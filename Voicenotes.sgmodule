@@ -5,4 +5,4 @@
 voicenotes = type=http-response,pattern=https://api.voicenotes.com/api/auth/me,requires-body=1,script-path=https://raw.githubusercontent.com/Daniel0829/Collections/Scripts/voicenotes.js,timeout=60
 
 [MITM]
-hostname = api.voicenotes.com
+hostname = %APPEND% api.voicenotes.com
