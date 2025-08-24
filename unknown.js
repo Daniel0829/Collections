@@ -8,8 +8,8 @@
 **************************************
 
 [rewrite_local]
-^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://raw.githubusercontent.com/YourUsername/Collections/refs/heads/Scripts/Revenuecat-optimized.js
-^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-request-header https://raw.githubusercontent.com/YourUsername/Collections/refs/heads/Scripts/Revenuecat-optimized.js
+^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://raw.githubusercontent.com/Daniel0829/Collections/refs/heads/Scripts/unknown.js
+^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-request-header https://raw.githubusercontent.com/Daniel0829/Collections/refs/heads/Scripts/unknown.js
 
 [mitm]
 hostname = api.revenuecat.com, api.rc-backup.com
