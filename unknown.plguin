@@ -1,0 +1,101 @@
+#!name = App解锁合集
+#!author = @ddm1023
+#!homepage = https://t.me/ddm1023
+#!icon=https://raw.githubusercontent.com/chxm1023/Task/main/icon/ddm.png
+
+#============【使用说明】==============#
+# 使用声明：作者并未参与任何形式的金钱交易，仅限测试和学习，请勿转载与贩卖，下载使用后24小时请删除⚠️⚠️⚠️⚠️⚠️
+
+# 使用方法：先开脚本再打开App，自动会生效，如果无效就关了重开或者按一下恢复购买，在还不行就卸载App重新安装！最后还不行的话就是脚本失效了！
+
+# 特别说明：此脚本可能会导致App Store无法登录
+# 解决方法：关[MITM][脚本][代理工具]方法选一即可
+
+# 更新日期：2025-01-17
+
+#=============UserScript=============#
+
+[Rewrite]
+#去除墨迹天气AD
+^http?:\/\/oss4bpc\.moji\.com\/.\d+\/.\d+\/.\d+\/.+\.jpg - reject
+#iScreen小组件-屏蔽付费提示
+^https?:\/\/pay\.kuso\.xyz\/pay\/pay-check - reject-200
+#恋小语-去广告
+^http:\/\api\.love\.823123\.com\/facades\/ad_space\.index - reject-200
+#去除FT中文网AD
+^https?:\/\/ftmailbox\.cn\/ad_impression - reject-200
+
+[Script]
+#Revenuecat-系列 hostname = api.revenuecat.com, api.rc-backup.com
+http-response ^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/Daniel0829/Collections/refs/heads/Scripts/Reheji.js, requires-body=true, timeout=60, tag=Reheji
+
+http-request ^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/Daniel0829/Collections/refs/heads/Scripts/Reheji.js, timeout=60, tag=Reheji
+
+#iTunes-系列 hostname = buy.itunes.apple.com
+http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path=https://raw.githubusercontent.com/Daniel0829/Collections/refs/heads/Scripts/iTunes.js, requires-body=true, timeout=60, tag=iTunes
+
+#彩云天气-广告净化/弹窗AD/去除亲友卡/去除悬浮模块 hostname = *.cyapi.cn
+http-response ^https?:\/\/(ad|biz|wrapper|starplucker)\.cyapi\.cn\/.+\/((activity\?app_name|operation|config|req\?app_name=weather)|v\d\/(trial_card\/info|entries|friend_cards|token\/device)) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyuntianqi.js, requires-body=true, timeout=60, tag=caiyuntianqi
+
+#彩云天气-VIP信息
+http-response ^https?:\/\/(biz|wrapper|starplucker)\.cyapi\.cn\/(v\d\/user\?app_name|.+\/v\d\/(vip_info|user_detail)) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyuntianqi.js, requires-body=true, timeout=60, tag=caiyuntianqi
+
+#彩云天气-SVIP地图-48小时预报
+http-request ^https?:\/\/(api|wrapper)\.cyapi\.cn\/v\d\/(satellite|nafp\/origin_images) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyuntianqi.js, timeout=60, tag=caiyuntianqi
+
+#Emby(解锁播放权限) hostname = mb3admin.com
+http-response ^https?:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/embycrack.js, requires-body=true, timeout=60, tag=embycrack
+
+#扫描全能王 hostname = *.camscanner.com, *.intsig.net
+http-response ^https?:\/\/.*\.(intsig\.net|camscanner\.com) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/CamScanner.js, requires-body=true, timeout=60, tag=CamScanner
+
+#傲软抠图，傲软扫描，傲软PDF转换，傲软PDF编辑，傲软投屏，咖映，轻闪PDF，乃糖小组件，佐糖，佐糖照片修复 hostname = *.aoscdn.com, *.apsapp.cn
+http-response ^https?:\/\/.*\.(aoscdn\.com|apsapp\.cn) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/arqjt.js, requires-body=true, timeout=60, tag=arqjt
+
+#Agenda-当笔记遇见日历 hostname = accounts.agenda.com
+http-response ^https?:\/\/accounts\.agenda\.com\/users\/.*\/license script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Agenda.js, requires-body=true, timeout=60, tag=Agenda
+
+#Cubox-收藏阅读 hostname = cubox.*
+http-response ^https?:\/\/cubox\.(pro|cc)\/.+\/api\/userInfo script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Cb.js, requires-body=true, timeout=60, tag=Cb
+
+#猫头鹰文件管理 hostname = www.skyjos.cn
+http-response ^https?:\/\/www\.skyjos\.cn script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/mtywj.js, requires-body=true, timeout=60, tag=mtywj
+
+#极简汇率 hostname = xremit.xcurrency.com, explorer.tratao.com
+http-response ^https?:\/\/(xremit\.xcurrency|explorer.tratao)\.com\/api\/client\/xtool\/vip script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/jijianhuilv.js, requires-body=true, timeout=60, tag=jijianhuilv
+
+#WPS Office hostname = *.wps.cn
+http-response ^https?:\/\/(vas|account|drive)\.wps\.cn\/(query\/api\/.+\/list_purchase_info|api\/(v\d\/spaces|users\/.+\/overview)) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/WPS.js, requires-body=true, timeout=60, tag=WPS
+
+#经济学人·商论 hostname = api.hummingbird.businessreview.global
+http-response ^https:\/\/api\.hummingbird\.businessreview\.global\/api\/subscriptions\/get_active script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/jjxrsl.js, requires-body=true, timeout=60, tag=jjxrsl
+
+#flomo hostname = fl*app.com
+http-response ^https:\/\/fl.*app\.com\/api\/v\d\/user\/me script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/lofo.js, requires-body=true, timeout=60, tag=lofo
+
+#Hyperweb Safari浏览器扩展 hostname = zy6kcqa01a.execute-api.us-east-2.amazonaws.com
+http-response ^https?:\/\/zy6kcqa01a\.execute-api\.us-east-2\.amazonaws\.com\/prod\/verifyReceipt script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Hyperweb.js, requires-body=true, timeout=60, tag=Hyperweb
+
+#Drafts hostname = backend.getdrafts.com
+http-response ^https?:\/\/backend\.getdrafts\.com\/api\/v\d\/verification\/(account_status|verify_receipt) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Drafts.js, requires-body=true, timeout=60, tag=Drafts
+
+#FT中文网/RainViewer天气预报 hostname = *.cloudfront.net, ftmailbox.cn
+http-response ^https?:\/\/.*\.cloudfront\.net\/(index\.php\/jsapi\/(paywall|get_story_more_info)|mobile\/verify) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/cloudfront.js, requires-body=true, timeout=60, tag=cloudfront
+
+#Felo实时翻译 hostname = translator.felo.me
+http-response ^https?:\/\/translator\.felo\.me\/api\/plan\/current script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Felo.js, requires-body=true, timeout=60, tag=Felo
+
+#众山小读书 hostname = umeecorn.com
+http-response ^https:\/\/umeecorn\.com\/notebook\/(loginedUser\/(info|tier|balance)|user\/(login|loginApple)) script-path=https://raw.githubusercontent.com/leey668/pyer/main/notebook.js, requires-body=true, timeout=60, tag=notebook
+
+#Grammarly-移动输入法 hostname = *.grammarly.com
+http-response ^https?:\/\/.*\.grammarly\.com\/(api\/v\d\/subscription|v\d\/user\/oranonymous) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Grammarly.js, requires-body=true, timeout=60, tag=Grammarly
+
+#Craft-文件笔记编辑器 hostname = api.craft.do
+http-response ^https?:\/\/(api|docs)\.craft\.do\/(api\/)?(auth\/v\d\/profile|subscription\/(receipt|teams\/get-subscriptions)) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Craft.js, requires-body=true, timeout=60, tag=Craft
+
+#Filmix-影视库重命名工具
+http-response ^https?:\/\/appv2\.filmix\.com\.cn\/api\/v\d\/users script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/filmix.js, requires-body=true, timeout=60, tag=filmix
+
+[MITM]
+hostname = %APPEND% appv2.filmix.com.cn, api.craft.do, *.grammarly.com, umeecorn.com, translator.felo.me, *.cloudfront.net, ftmailbox.cn, backend.getdrafts.com, zy6kcqa01a.execute-api.us-east-2.amazonaws.com, fl*app.com, api.hummingbird.businessreview.global, *.wps.cn, xremit.xcurrency.com, explorer.tratao.com, www.skyjos.cn, cubox.*, accounts.agenda.com, *.aoscdn.com, *.apsapp.cn, *.camscanner.com, mb3admin.com, *.cyapi.cn, buy.itunes.apple.com, api.rc-backup.com, api.revenuecat.com
