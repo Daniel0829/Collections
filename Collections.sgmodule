@@ -21,9 +21,9 @@
 
 [Script]
 #Revenuecat-系列 hostname = api.revenuecat.com, api.rc-backup.com
-Reheji = type=http-response, pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), script-path=https://raw.githubusercontent.com/Daniel0829/Collections/refs/heads/Scripts/Reheji.js, requires-body=true, max-size=-1, timeout=60
+#Reheji = type=http-response, pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), script-path=https://raw.githubusercontent.com/Daniel0829/Collections/refs/heads/Scripts/Reheji.js, requires-body=true, max-size=-1, timeout=60
 
-Reheji = type=http-request, pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), script-path=https://raw.githubusercontent.com/Daniel0829/Collections/refs/heads/Scripts/Reheji.js, timeout=60
+#Reheji = type=http-request, pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), script-path=https://raw.githubusercontent.com/Daniel0829/Collections/refs/heads/Scripts/Reheji.js, timeout=60
 
 #iTunes-系列 hostname = buy.itunes.apple.com
 iTunes = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/Daniel0829/Collections/refs/heads/Scripts/iTunes.js, requires-body=true, max-size=-1, timeout=60
