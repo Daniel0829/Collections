@@ -59,7 +59,6 @@ const subscriptionModels = {
 // 通过 Bundle ID 精准匹配 App
 const bundle = {
     'com.valo.reader.vip2.forever': { name: 'vip', id: 'com.valo.reader.vip2.forever', cm: 'sjb' }, //读不舍手
-    'com.trainfitness.Train': { name: 'Pro', id: 'TrainAnnualSubscription', cm: 'sja' }, //TrainFitness 健身追踪器
 };
 
 // 通过 User-Agent 模糊匹配 App
