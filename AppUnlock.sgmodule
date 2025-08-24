@@ -1,3 +1,6 @@
+#!name=AppUnlock
+#!desc=AppUnlock
+
 [Map Local]
 #去除FT中文网AD
 ^https?:\/\/ftmailbox\.cn\/ad_impression data-type=text data=" " status-code=200
