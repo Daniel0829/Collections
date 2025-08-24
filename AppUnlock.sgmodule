@@ -1,0 +1,28 @@
+[Map Local]
+#去除FT中文网AD
+^https?:\/\/ftmailbox\.cn\/ad_impression data-type=text data=" " status-code=200
+
+[Script]
+#Cubox-收藏阅读 hostname = cubox.*
+Cb = type=http-response, pattern=^https?:\/\/cubox\.(pro|cc)\/.+\/api\/userInfo, script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Cb.js, requires-body=true, max-size=-1, timeout=60
+
+#极简汇率 hostname = xremit.xcurrency.com, explorer.tratao.com
+jijianhuilv = type=http-response, pattern=^https?:\/\/(xremit\.xcurrency|explorer.tratao)\.com\/api\/client\/xtool\/vip, script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/jijianhuilv.js, requires-body=true, max-size=-1, timeout=60
+
+#经济学人·商论 hostname = api.hummingbird.businessreview.global
+jjxrsl = type=http-response, pattern=^https:\/\/api\.hummingbird\.businessreview\.global\/api\/subscriptions\/get_active, script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/jjxrsl.js, requires-body=true, max-size=-1, timeout=60
+
+#flomo hostname = fl*app.com
+lofo = type=http-response, pattern=^https:\/\/fl.*app\.com\/api\/v\d\/user\/me, script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/lofo.js, requires-body=true, max-size=-1, timeout=60
+
+#Drafts hostname = backend.getdrafts.com
+Drafts = type=http-response, pattern=^https?:\/\/backend\.getdrafts\.com\/api\/v\d\/verification\/(account_status|verify_receipt), script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Drafts.js, requires-body=true, max-size=-1, timeout=60
+
+#FT中文网/RainViewer天气预报 hostname = *.cloudfront.net, ftmailbox.cn
+cloudfront = type=http-response, pattern=^https?:\/\/.*\.cloudfront\.net\/(index\.php\/jsapi\/(paywall|get_story_more_info)|mobile\/verify), script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/cloudfront.js, requires-body=true, max-size=-1, timeout=60
+
+#Craft-文件笔记编辑器 hostname = api.craft.do
+Craft = type=http-response, pattern=^https?:\/\/(api|docs)\.craft\.do\/(api\/)?(auth\/v\d\/profile|subscription\/(receipt|teams\/get-subscriptions)), script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Craft.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% cubox.*, xremit.xcurrency.com, explorer.tratao.com,api.hummingbird.businessreview.global, fl*app.com, backend.getdrafts.com, *.cloudfront.net, ftmailbox.cn, api.craft.do
