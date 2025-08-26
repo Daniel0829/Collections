@@ -1,0 +1,32 @@
+#!name=AppUnlock
+#!desc=AppUnlock
+
+[Rewrite]
+#去除FT中文网AD
+^https?:\/\/ftmailbox\.cn\/ad_impression - reject-200
+
+[Script]
+#Cubox-收藏阅读 hostname = cubox.*
+http-response ^https?:\/\/cubox\.(pro|cc)\/.+\/api\/userInfo script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Cb.js, requires-body=true, timeout=60, tag=Cb
+
+#极简汇率 hostname = xremit.xcurrency.com, explorer.tratao.com
+http-response ^https?:\/\/(xremit\.xcurrency|explorer.tratao)\.com\/api\/client\/xtool\/vip script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/jijianhuilv.js, requires-body=true, timeout=60, tag=jijianhuilv
+
+#经济学人·商论 hostname = api.hummingbird.businessreview.global
+http-response ^https:\/\/api\.hummingbird\.businessreview\.global\/api\/subscriptions\/get_active script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/jjxrsl.js, requires-body=true, timeout=60, tag=jjxrsl
+
+#flomo hostname = fl*app.com
+http-response ^https:\/\/fl.*app\.com\/api\/v\d\/user\/me script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/lofo.js, requires-body=true, timeout=60, tag=lofo
+
+#Drafts hostname = backend.getdrafts.com
+http-response ^https?:\/\/backend\.getdrafts\.com\/api\/v\d\/verification\/(account_status|verify_receipt) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Drafts.js, requires-body=true, timeout=60, tag=Drafts
+
+#FT中文网/RainViewer天气预报 hostname = *.cloudfront.net, ftmailbox.cn
+http-response ^https?:\/\/.*\.cloudfront\.net\/(index\.php\/jsapi\/(paywall|get_story_more_info)|mobile\/verify) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/cloudfront.js, requires-body=true, timeout=60, tag=cloudfront
+
+#Craft-文件笔记编辑器 hostname = api.craft.do
+http-response ^https?:\/\/(api|docs)\.craft\.do\/(api\/)?(auth\/v\d\/profile|subscription\/(receipt|teams\/get-subscriptions)) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Craft.js, requires-body=true, timeout=60, tag=Craft
+
+[MITM]
+hostname = %APPEND% cubox.*, xremit.xcurrency.com, explorer.tratao.com,api.hummingbird.businessreview.global, fl*app.com, backend.getdrafts.com, *.cloudfront.net, ftmailbox.cn, api.craft.do
+
