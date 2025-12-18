@@ -1,4 +1,4 @@
-//https://fastly.jsdelivr.net/gh/StashNetworks/misc@main/collapsed-tiles/script/ippure-ip-fraud-score.js
+// https://fastly.jsdelivr.net/gh/StashNetworks/misc@main/collapsed-tiles/script/ippure-ip-fraud-score.js
 async function request(method, params) {
   return new Promise((resolve) => {
     const httpMethod = $httpClient[method.toLowerCase()];
