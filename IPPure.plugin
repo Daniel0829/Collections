@@ -1,3 +1,6 @@
+#!name=IPPure
+#!desc=IPPure IP Info / Fraud Score / Native Check
+
 [Plugin]
 # IPPure IP Info
 # 这是一个面板插件
