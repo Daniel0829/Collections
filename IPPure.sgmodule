@@ -1,0 +1,19 @@
+[Panel]
+# IPPure IP Info
+ippure-ip-info = script-name=IPPure-IP-Info, title="IPPure IP Info", icon=globe, content="请等待…", update-interval=300
+
+# IPPure IP Fraud Score
+ippure-ip-fraud = script-name=IPPure-IP-Fraud-Score, title="IPPure IP Fraud Score", icon=shield.checkered, content="请等待…", update-interval=300
+
+# IPPure IP Native Check
+ippure-ip-native = script-name=IPPure-IP-Native-Check, title="IPPure IP Native Check", icon=house, content="请等待…", update-interval=300
+
+[Script]
+# IPPure IP Info 脚本
+IPPure-IP-Info = type=generic, script-path=https://fastly.jsdelivr.net/gh/StashNetworks/misc@main/collapsed-tiles/script/ippure-ip-info.js, argument=title=IPPure IP Info
+
+# IPPure IP Fraud Score 脚本
+IPPure-IP-Fraud-Score = type=generic, script-path=https://fastly.jsdelivr.net/gh/StashNetworks/misc@main/collapsed-tiles/script/ippure-ip-fraud-score.js, argument=title=IPPure IP Fraud Score
+
+# IPPure IP Native Check 脚本
+IPPure-IP-Native-Check = type=generic, script-path=https://fastly.jsdelivr.net/gh/StashNetworks/misc@main/collapsed-tiles/script/ippure-ip-native-check.js, argument=title=IPPure IP Native Check
