@@ -1,0 +1,25 @@
+[Plugin]
+# IPPure IP Info
+# 这是一个面板插件
+name = IPPure IP Info
+desc = 显示当前 IP 的完整信息
+icon = https://ippure.com/logo.png
+script = https://fastly.jsdelivr.net/gh/StashNetworks/misc@main/collapsed-tiles/script/ippure-ip-info.js
+type = panel
+interval = 300
+
+# IPPure IP Fraud Score
+name = IPPure IP Fraud Score
+desc = 显示 IP 欺诈风险评分
+icon = https://ippure.com/logo.png
+script = https://fastly.jsdelivr.net/gh/StashNetworks/misc@main/collapsed-tiles/script/ippure-ip-fraud-score.js
+type = panel
+interval = 300
+
+# IPPure IP Native Check
+name = IPPure IP Native Check
+desc = 检测 IP 是否为原生/住宅 IP
+icon = https://ippure.com/logo.png
+script = https://fastly.jsdelivr.net/gh/StashNetworks/misc@main/collapsed-tiles/script/ippure-ip-native-check.js
+type = panel
+interval = 300
