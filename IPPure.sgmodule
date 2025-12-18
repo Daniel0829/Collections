@@ -1,3 +1,6 @@
+#!name=IPPure
+#!desc=IPPure IP Info / Fraud Score / Native Check
+
 [Panel]
 # IPPure IP Info
 ippure-ip-info = script-name=IPPure-IP-Info, title="IPPure IP Info", icon=globe, content="请等待…", update-interval=300
